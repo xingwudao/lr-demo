@@ -1,0 +1,247 @@
+.logistic-regression {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.training-section,
+.prediction-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iteration-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iteration-control label {
+  font-weight: bold;
+  color: #333;
+}
+
+.iteration-control input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.iteration-control input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #45a049;
+}
+
+.buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.training-visualization {
+  margin: 20px 0;
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-visualization {
+  margin: 20px 0;
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weights,
+.formula {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.weights h3,
+.formula h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weights p,
+.formula p,
+.prediction-result p {
+  margin: 5px 0;
+  color: #666;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.weights p span,
+.formula p span,
+.prediction-result p span {
+  color: #2196F3;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.weights p span:hover,
+.formula p span:hover,
+.prediction-result p span:hover {
+  color: #1976D2;
+}
+
+.formula p {
+  margin-left: 20px;
+}
+
+.prediction-result p span {
+  color: #4CAF50;
+}
+
+.input-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #333;
+  min-width: 150px;
+}
+
+.input-group input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100px;
+}
+
+.prediction-result {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.prediction-result h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 12px;
+}
+
+.axis-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.loss-curve {
+  fill: none;
+  stroke: #4CAF50;
+  stroke-width: 2;
+}
+
+.data-point {
+  cursor: pointer;
+  transition: r 0.3s;
+}
+
+.data-point:hover {
+  r: 8;
+}
+
+.input-point {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    r: 8;
+    opacity: 0.7;
+  }
+  50% {
+    r: 10;
+    opacity: 0.9;
+  }
+  100% {
+    r: 8;
+    opacity: 0.7;
+  }
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #666;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.error {
+  color: #d32f2f;
+  background-color: #ffebee;
+} 
